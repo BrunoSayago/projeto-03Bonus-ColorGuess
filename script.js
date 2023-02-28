@@ -4,6 +4,7 @@ const codigoRGB = document.getElementById('rgb-color');
 const paragrafoResultado = document.getElementById('answer');
 const botaoReset = document.getElementById('reset-game');
 const placar = document.getElementById('score');
+// teste
 
 // Funções gerais //
 
