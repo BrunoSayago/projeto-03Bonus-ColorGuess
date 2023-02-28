@@ -4,7 +4,6 @@ const codigoRGB = document.getElementById('rgb-color');
 const paragrafoResultado = document.getElementById('answer');
 const botaoReset = document.getElementById('reset-game');
 const placar = document.getElementById('score');
-// teste
 
 // Funções gerais //
 
@@ -18,7 +17,8 @@ function stringRGB() {
 }
 
 function determinaIndexBola() {
-  const indexRND = Math.floor(Math.random() * 6);
+  const indexRND = Math.floor(Math.random() * 5);
+  console.log(indexRND);
   return bolas[indexRND];
 }
 
@@ -29,6 +29,9 @@ function determinaRGBTexto() {
 function geraCorBolas() {
   for (let index = 0; index < bolas.length; index += 1) {
     const bolaAtual = bolas[index];
+    if (bolaAtual.classList.contains('certa')) {
+      bolaAtual.classList.remove('certa')
+    }
     const estiloAtual = bolaAtual.style;
     estiloAtual.setProperty('background-color', stringRGB());
   }
